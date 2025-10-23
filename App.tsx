@@ -36,5 +36,11 @@ const RootStack = createNativeStackNavigator({
 const Navigation = createStaticNavigation(RootStack);
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Open Sans': require('./assets/OpenSans.ttf'),
+  });
+
+  if (!fontsLoaded) return null;
+
   return <Navigation />;
 }
