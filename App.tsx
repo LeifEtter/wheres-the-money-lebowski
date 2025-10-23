@@ -1,12 +1,14 @@
+import './global.css';
 import * as React from 'react';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from 'screens/HomeScreen';
-import { ProfileScreen } from 'screens/ProfileScreen';
+import { AddExpenseScreen } from 'screens/AddExpenseScreen';
+import { Button, Pressable, Text } from 'react-native';
+import { useFonts } from 'expo-font';
 
 export type RootStackParamList = {
-  home: undefined;
-  Profile: { name: string };
+  AddExpense: {};
   Home: {};
 };
 
@@ -16,8 +18,17 @@ const RootStack = createNativeStackNavigator({
       screen: HomeScreen,
       options: { title: 'Welcome' },
     },
-    Profile: {
-      screen: ProfileScreen,
+    AddExpense: {
+      options: {
+        title: 'Add Expense',
+        headerShadowVisible: false,
+        headerRight: () => (
+          <Pressable onPress={() => alert('This is a button!')}>
+            <Text>Save</Text>
+          </Pressable>
+        ),
+      },
+      screen: AddExpenseScreen,
     },
   },
 });
