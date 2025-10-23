@@ -3,3 +3,27 @@
 @import 'tailwindcss/utilities.css';
 
 @import 'nativewind/theme';
+
+@layer base {
+  html {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  Text {
+    font-family: 'Open Sans';
+  }
+}
+
+@theme {
+  --color-lebowski-purple-100: #f6f3ff;
+  --color-lebowski-purple-800: #a09ab6;
+  --color-lebowski-purple-900: #423a62;
+}
+
+body {
+  font-family: 'Open Sans';
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
