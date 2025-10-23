@@ -6,7 +6,7 @@ export function HomeScreen() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   return (
-    <Pressable onPress={() => navigation.navigate('Profile', { name: 's' })}>
+    <Pressable onPress={() => navigation.navigate('AddExpense', { name: 's' })}>
       <Text>Press Me</Text>
     </Pressable>
   );
