@@ -22,6 +22,8 @@ const RootStack = createNativeStackNavigator({
       options: {
         title: 'Add Expense',
         headerShadowVisible: false,
+        headerShown: true,
+        headerTransparent: true,
         headerRight: () => (
           <Pressable onPress={() => alert('This is a button!')}>
             <Text>Save</Text>
