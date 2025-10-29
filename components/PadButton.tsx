@@ -17,7 +17,7 @@ export const SingleButton = ({
   textClassName,
 }: SingleButtonProps) => (
   <Pressable
-    className={`${className} rounded-3xl shadow-sm ${double ? 'aspect-[2] w-[41%]' : 'aspect-square w-[20%]'} flex items-center justify-center`}
+    className={`${className} rounded-3xl shadow-sm ${double ? 'w-47' : 'mx-1 aspect-square w-22'} flex h-22 items-center justify-center`}
     onPress={onClick}>
     <Text className={`text-2xl font-semibold ${textClassName}`}>{value}</Text>
   </Pressable>
