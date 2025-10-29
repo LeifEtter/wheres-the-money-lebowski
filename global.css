@@ -19,6 +19,17 @@
   --color-lebowski-purple-400: #cac1e7;
   --color-lebowski-purple-800: #a09ab6;
   --color-lebowski-purple-900: #423a62;
+
+  --animate-blink: blink 1s ease-in-out infinite;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 100%;
+    }
+  }
 }
 
 body {
